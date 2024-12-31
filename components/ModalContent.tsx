@@ -14,8 +14,8 @@ export default function ModalContent({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          <p>Lorem ipsum </p>
-          <p>foobar</p>
+          <Text>Lorem ipsum </Text>
+          <Text>foobar</Text>
         </Text>
       </View>
     </View>

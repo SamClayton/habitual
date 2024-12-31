@@ -6,10 +6,10 @@ import { Text, View } from '@/components/Themed';
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>Streak</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <p>Put a calendar here, along with basic stats, stressing the
-        consecutive days of the current streak.</p>
+      <Text>Put a calendar here, along with basic stats, stressing the
+        consecutive days of the current streak.</Text>
     </View>
   );
 }

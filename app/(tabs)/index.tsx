@@ -11,18 +11,18 @@ export default function TabOneScreen() {
 
       <Pressable>
         <AntDesign style={styles.star} name="staro" size={50} />
-        Cardio
       </Pressable>
+      <Text style={styles.activity} >Cardio</Text>
+      <Pressable>
+        <AntDesign style={styles.star} name="staro" size={50} color="purple" lightColor="white" darkColor="white" />
+      </Pressable>
+      <Text style={styles.activity} >Brush teeth</Text>
       <Pressable>
         <AntDesign style={styles.star} name="staro" size={50} />
-        Brush teeth
       </Pressable>
-      <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} />
-        15 min yoga
-      </Pressable>
+      <Text style={styles.activity} >15 min yoga</Text>
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={styles.separator}  lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
       <Text style={styles.title}>Completed today</Text>
     </View>
@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     margin: 25
+  },
+  activity: {
+    fontSize: 16,
   },
   separator: {
     marginVertical: 30,

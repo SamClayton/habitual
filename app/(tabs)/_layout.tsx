@@ -17,6 +17,23 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
+function SettingsModal(props: {
+  color: string;
+}) {
+  return <Link href="/modal" asChild>
+      <Pressable>
+        {({ pressed }) => (
+          <AntDesign
+            name="setting"
+            size={25}
+            color={props.color}
+            style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+          />
+        )}
+      </Pressable>
+    </Link>
+}
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -26,7 +43,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'dark'].tint,
         // Disable the static render of the header on web
         // to prevent a hydration error in React Navigation v6.
-        // TODO I want to switch to Expo Router, so this wouldn't apply
+        // TODO Not working on Android dev build in dark mode
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
@@ -34,20 +51,7 @@ export default function TabLayout() {
         options={{
           title: 'Activities',
           tabBarIcon: ({ color }) => <AntDesign name="staro" size={24} color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+          headerRight: ({ color }) => <SettingsModal color={color} />
         }}
       />
       <Tabs.Screen
@@ -59,9 +63,9 @@ export default function TabLayout() {
       />
       {/* tabBarIcon: ({ color }) => <AntDesign name="piechart" size={24} color={color} />, */}
       <Tabs.Screen
-        name="reports"
+        name="stats"
         options={{
-          title: 'Reports',
+          title: 'Stats',
           tabBarIcon: ({color}) => <SimpleLineIcons name="pie-chart" size={24} color={color} />
         }}
       />

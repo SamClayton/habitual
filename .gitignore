@@ -35,3 +35,7 @@ yarn-error.*
 
 # Dev build bundles, though later I'd like to include release artifacts
 *.aab
+
+# Prebuild-related
+/android
+/ios
