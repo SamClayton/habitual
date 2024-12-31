@@ -39,3 +39,6 @@ yarn-error.*
 # Prebuild-related
 /android
 /ios
+
+# Mostly EAS builds
+build-*.a??

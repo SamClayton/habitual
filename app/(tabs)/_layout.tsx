@@ -59,6 +59,7 @@ export default function TabLayout() {
         options={{
           title: 'Streak',
           tabBarIcon: ({ color }) => <AntDesign name="calendar" size={24} color={color} />,
+          headerRight: ({ color }) => <SettingsModal color={color} />
         }}
       />
       {/* tabBarIcon: ({ color }) => <AntDesign name="piechart" size={24} color={color} />, */}
@@ -66,7 +67,8 @@ export default function TabLayout() {
         name="stats"
         options={{
           title: 'Stats',
-          tabBarIcon: ({color}) => <SimpleLineIcons name="pie-chart" size={24} color={color} />
+          tabBarIcon: ({color}) => <SimpleLineIcons name="pie-chart" size={24} color={color} />,
+          headerRight: ({ color }) => <SettingsModal color={color} />
         }}
       />
       <Tabs.Screen
@@ -74,6 +76,7 @@ export default function TabLayout() {
         options={{
           title: 'Trends',
           tabBarIcon: ({ color }) => <AntDesign name="linechart" size={24} color={color} />,
+          headerRight: ({ color }) => <SettingsModal color={color} />
         }}
       />
     </Tabs>
