@@ -43,7 +43,7 @@ export default function TabLayout() {
         options={{
           title: 'Activities',
           tabBarIcon: ({ color }) => <AntDesign name="staro" size={24} color={color} />,
-          headerRight: ({ color }) => <SettingsModal color={color} />
+          headerRight: ({ }) => <SettingsModal color={Colors[colorScheme ?? 'dark'].tint} />
         }}
       />
       <Tabs.Screen

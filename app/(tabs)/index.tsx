@@ -10,15 +10,15 @@ export default function TabOneScreen() {
       <Text style={styles.title}>Remaining today</Text>
 
       <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} />
+        <AntDesign style={styles.star} name="staro" size={50} color="skyblue" />
       </Pressable>
       <Text style={styles.activity}>Cardio</Text>
       <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} color="purple" lightColor="white" darkColor="white" />
+        <AntDesign style={styles.star} name="staro" size={50} color="darkviolet" lightColor="purple" darkColor="white" />
       </Pressable>
-      <Text style={styles.activity}>Brush teeth</Text>
+      <Text style={styles.activity}>Leetcode</Text>
       <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} />
+        <AntDesign style={styles.star} name="staro" size={50} color="red" />
       </Pressable>
       <Text style={styles.activity}>15 min yoga</Text>
 
@@ -42,6 +42,8 @@ const styles = StyleSheet.create({
   },
   activity: {
     fontSize: 16,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   separator: {
     marginVertical: 30,
@@ -50,7 +52,6 @@ const styles = StyleSheet.create({
   },
   star: {
     margin: 5,
-    color: 'black',
     justifyContent: 'flex-start',
     alignItems: 'center',
   }
