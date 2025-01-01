@@ -12,15 +12,15 @@ export default function TabOneScreen() {
       <Pressable>
         <AntDesign style={styles.star} name="staro" size={50} />
       </Pressable>
-      <Text style={styles.activity} >Cardio</Text>
+      <Text style={styles.activity}>Cardio</Text>
       <Pressable>
         <AntDesign style={styles.star} name="staro" size={50} color="purple" lightColor="white" darkColor="white" />
       </Pressable>
-      <Text style={styles.activity} >Brush teeth</Text>
+      <Text style={styles.activity}>Brush teeth</Text>
       <Pressable>
         <AntDesign style={styles.star} name="staro" size={50} />
       </Pressable>
-      <Text style={styles.activity} >15 min yoga</Text>
+      <Text style={styles.activity}>15 min yoga</Text>
 
       <View style={styles.separator}  lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 

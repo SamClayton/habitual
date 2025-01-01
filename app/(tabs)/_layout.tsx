@@ -20,7 +20,7 @@ function TabBarIcon(props: {
 function SettingsModal(props: {
   color: string;
 }) {
-  return <Link href="/modal" asChild>
+  return <Link href="/settings" asChild>
       <Pressable>
         {({ pressed }) => (
           <AntDesign

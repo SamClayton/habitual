@@ -14,8 +14,9 @@ export default function ModalContent({ path }: { path: string }) {
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          <Text>Lorem ipsum </Text>
-          <Text>foobar</Text>
+          <Text>Streak grace period? </Text>
+          <Text>Day ends at:</Text>
+          <Text></Text>
         </Text>
       </View>
     </View>
