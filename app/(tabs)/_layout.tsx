@@ -26,8 +26,13 @@ function SettingsModal(props: {
     </Link>
 }
 
+function SettingsHeaderIcon() {
+
+}
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const tintColor: string = Colors[colorScheme ?? 'dark'].tint;
 
   return (
     <Tabs
@@ -43,7 +48,7 @@ export default function TabLayout() {
         options={{
           title: 'Activities',
           tabBarIcon: ({ color }) => <AntDesign name="staro" size={24} color={color} />,
-          headerRight: ({ }) => <SettingsModal color={Colors[colorScheme ?? 'dark'].tint} />
+          headerRight: ({ tintColor: string }) => <SettingsModal color={tintColor} />
         }}
       />
       <Tabs.Screen
@@ -51,7 +56,7 @@ export default function TabLayout() {
         options={{
           title: 'Streak',
           tabBarIcon: ({ color }) => <AntDesign name="calendar" size={24} color={color} />,
-          headerRight: ({ color }) => <SettingsModal color={color} />
+          headerRight: ({ tintColor: string }) => <SettingsModal color={tintColor} />
         }}
       />
       {/* tabBarIcon: ({ color }) => <AntDesign name="piechart" size={24} color={color} />, */}
@@ -60,7 +65,7 @@ export default function TabLayout() {
         options={{
           title: 'Stats',
           tabBarIcon: ({color}) => <SimpleLineIcons name="pie-chart" size={24} color={color} />,
-          headerRight: ({ color }) => <SettingsModal color={color} />
+          headerRight: ({ tintColor: string }) => <SettingsModal color={tintColor} />
         }}
       />
       <Tabs.Screen
@@ -68,7 +73,7 @@ export default function TabLayout() {
         options={{
           title: 'Trends',
           tabBarIcon: ({ color }) => <AntDesign name="linechart" size={24} color={color} />,
-          headerRight: ({ color }) => <SettingsModal color={color} />
+          headerRight: ({ tintColor: string }) => <SettingsModal color={tintColor} />
         }}
       />
     </Tabs>
