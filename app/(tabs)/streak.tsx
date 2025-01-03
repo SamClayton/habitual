@@ -5,7 +5,7 @@ import { Text, View } from '@/components/Themed';
 
 import {Calendar, LocaleConfig} from 'react-native-calendars';
 
-export default function TabTwoScreen() {
+export default function Streak() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Streak</Text>
@@ -47,4 +47,9 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  streak: {
+    fontSize: 20,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  }
 });
