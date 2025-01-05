@@ -4,38 +4,7 @@ import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 
 import {Calendar, LocaleConfig} from 'react-native-calendars';
-/*
 
-import { Calendar, momentLocalizer } from 'react-big-calendar'
-import moment from 'moment'
-
-const localizer = momentLocalizer(moment)
-const MyCalendar = (props) => (
-  return <div>
-    <MyCalendar
-      localizer={localizer}
-      startAccessor="start"
-      endAccessor="end"
-      style={{ height: 500 }}
-    />
-  </div>
-)
-
-      <Calendar height={600} />
-
-/*
-       <Calendar
-          onDayPress={day => {
-            console.log('selected day', day);
-          }}
-          markedDates={{
-            '2025-01-01': {selected: true, marked: true, selectedColor: 'purple'},
-            '2025-01-02': {marked: true},
-            '2025-01-03': {selected: true, marked: true, selectedColor: 'purple'},
-            '2025-01-04': {selected: true, marked: true, selectedColor: 'purple'}
-          }}
-        />
-*/ 
 /* basic stats, stressing the consecutive days of the current streak. */
 export default function Streak() { 
   return (
