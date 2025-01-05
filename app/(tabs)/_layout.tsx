@@ -26,10 +26,6 @@ function SettingsModal(props: {
     </Link>
 }
 
-function SettingsHeaderIcon() {
-
-}
-
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   const tintColor: string = Colors[colorScheme ?? 'dark'].tint;

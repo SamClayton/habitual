@@ -1,6 +1,7 @@
 import { StyleSheet, Pressable } from 'react-native';
 import { Text, View } from '@/components/Themed';
 
+import Star from '@/components/StarButton';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function TabOneScreen() {
@@ -9,21 +10,16 @@ export default function TabOneScreen() {
       {/* TODO: align this to the top even when it's empty */}
       <Text style={styles.title}>Remaining today</Text>
 
-      <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} color="skyblue" />
-      </Pressable>
+      <Star color="skyblue" size={75} />
       <Text style={styles.activity}>Cardio</Text>
-      <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} color="darkviolet" lightColor="purple" darkColor="white" />
-      </Pressable>
+
+      <Star color="darkviolet" size={75} />
       <Text style={styles.activity}>Leetcode</Text>
-      <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} color="pink" />
-      </Pressable>
+
+      <Star color="pink" size={75} />
       <Text style={styles.activity}>15 min yoga</Text>
-      <Pressable>
-        <AntDesign style={styles.star} name="staro" size={50} color="orange" />
-      </Pressable>
+
+      <Star color="orange" size={75} />
       <Text style={styles.activity}>Learn Spanish</Text>
 
       <View style={styles.separator}  lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />

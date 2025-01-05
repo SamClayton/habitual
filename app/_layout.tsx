@@ -6,6 +6,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 
+import { Provider } from 'react-redux';
+import store from '../redux/store.ts';
+
 import { useColorScheme } from '@/components/useColorScheme';
 
 export {
@@ -49,11 +52,13 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="settings" options={{ title: 'Settings', presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="settings" options={{ title: 'Settings', presentation: 'modal' }} />
+        </Stack>
+      </ThemeProvider>
+    </Provider>
   );
 }
